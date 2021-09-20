@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 
 const imageSchema = new Schema({
-    user_id: {type:String},
+    any_id: {type:String},
     image: {type:String}
 
 
