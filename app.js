@@ -113,7 +113,8 @@ app.use((err,req,res,next)=>{
 mongoose.connect(MONGODB,{useNewUrlParser:true,useUnifiedTopology: true})
 .then(()=>{
     console.log('connected to database');
-    return app.listen(7000);
+    return app.listen(process.env.PORT);
+    //7000
     // process.env.PORT
 })
 .then(()=> console.log('server is running '))
