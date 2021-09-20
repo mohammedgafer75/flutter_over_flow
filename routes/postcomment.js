@@ -7,9 +7,6 @@ router.route('/')
 .get(post_Co.getAllComment)
 .post(post_Co.postComment);
 
-router.route('/a')
-.get(post_Co.getComBy);
-
 router.route('/:commentId')
 .get(post_Co.getComById)
 .put(post_Co.updateComment)
