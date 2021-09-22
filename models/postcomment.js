@@ -7,6 +7,7 @@ const PostComment = new Schema({
  user_id :{ type: String, require:true },
  comment: {type: String, require:true},
  code: {type: String},
+ Time: {type: Date, default: Date.now },
  
 })
 

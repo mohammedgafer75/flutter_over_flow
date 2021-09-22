@@ -1,8 +1,10 @@
 const co = require('../models/postcomment');
+const ne = require('../models/postcomment');
+
 
 exports.getAllComment = async (req, res, next) =>{
- const Comments = await co.find({});
-    res.status(200).json(Comments);
+ const Comment = await ne.find({});
+    res.status(200).json(Comment);
  };
 
 exports.postComment = async (req, res, next) =>{
@@ -23,12 +25,7 @@ exports.getComById = async (req, res, next) =>{
     const Comments = await co.find({postId});
     res.status(200).json(Comments);
  };
- exports.getComBy = async (req, res, next) =>{
-    const { postId } = req.params;
-    const Comments = await _co.find({});
-    res.status(200).json(Comments);
- };
- 
+
  exports.updateComment = async (req, res, next) =>{
    const { commentId } = req.params;
    try {

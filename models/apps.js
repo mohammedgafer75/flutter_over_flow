@@ -7,5 +7,6 @@ const AppSchema = new Schema({
     link: {type: String},
     m_name: {type: String},
     image: { type: String },
+    Time: {type: Date, default: Date.now },
 })
 module.exports = mongoose.model('app', AppSchema);

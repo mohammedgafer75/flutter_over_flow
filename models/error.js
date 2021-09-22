@@ -8,6 +8,7 @@ const errorSchema = new Schema({
     link: {type: String},
     error_code: {type: String},
     solve_code: {type: String},
-    image: {type:String}
+    image: {type:String},
+    Time: {type: Date, default: Date.now },
 })
 module.exports = mongoose.model('error', errorSchema);

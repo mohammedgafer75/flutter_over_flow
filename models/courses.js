@@ -7,6 +7,7 @@ const CourseSchema = new Schema({
     m_name: {type: String},
     link:{type:String},
     image: {type: String},
+    Time: {type: Date, default: Date.now },
     
 })
 module.exports = mongoose.model('course', CourseSchema);
