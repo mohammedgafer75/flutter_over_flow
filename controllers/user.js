@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const { SECRET_KEY } = require('./../config');
 
 const User = require('./../models/user');
-const aboutU = require('./../models/aboutU');
 const { json } = require('body-parser');
 const { use } = require('../routes/user');
 const user = require('./../models/user');
