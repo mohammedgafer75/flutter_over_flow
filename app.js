@@ -14,6 +14,7 @@ const bodyparser = require('body-parser');
 const postRoutes = require('./routes/post');
 const courseRoutes = require('./routes/courses');
 const appRoutes = require('./routes/app');
+const feedbackRoutes = require('./routes/feedback');
 const SavedPostRoutes = require('./routes/saved_post');
 const SavedRecoRoutes = require('./routes/saved_reco');
 const errorRoutes = require('./routes/error');
@@ -32,6 +33,7 @@ app.use('/api/protected',auth,(req,res)=>{
 });
 
 app.use('/api/post', postRoutes);
+app.use('/api/feedback', feedbackRoutes);
 app.use('/api/course',courseRoutes);
 app.use('/api/app', appRoutes);
 app.use('/api/error', errorRoutes);
