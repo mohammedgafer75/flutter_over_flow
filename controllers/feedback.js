@@ -7,7 +7,7 @@ exports.getAllApp = async (req, res, next) =>{
 
 exports.postApp  = async (req, res, next) =>{
     const { text} = req.body;
-    const newMission = new app(text);
+    const newMission = new app({text});
     try {
         const App = await newMission.save();
         res.status(201).json({check:1,massage:'feed back added',id:App._id});
