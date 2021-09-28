@@ -101,7 +101,7 @@ app.patch('/api/image', upload.single('image'), async (req, res, next)  =>{
 
 
 app.use((req,res, next)=>{
- const err = new Error('not found');
+ const err = new Error('not in');
  err.status = 404;
  next(err);
 });
